@@ -1,7 +1,7 @@
 # proteinloc
 
-[![PyPI version](https://img.shields.io/pypi/v/proteinloc.svg)](https://pypi.org/project/proteinloc/)
-[![Python versions](https://img.shields.io/pypi/pyversions/proteinloc.svg)](https://pypi.org/project/proteinloc/)
+[![PyPI version](https://img.shields.io/pypi/v/proteinloc?label=pypi%20package)](https://pypi.org/project/proteinloc/0.1.0/)
+[![Python versions](https://img.shields.io/pypi/pyversions/proteinloc)](https://pypi.org/project/proteinloc/0.1.0/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/jpuglia/proteinloc/actions/workflows/ci.yml/badge.svg)](https://github.com/jpuglia/proteinloc/actions/workflows/ci.yml)
 
