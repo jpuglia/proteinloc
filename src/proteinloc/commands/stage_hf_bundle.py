@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import Optional
 
 import typer
+from proteinloc import hub
 from proteinloc.classifiers.classifiers import ClassifierLoader
-from proteinloc.commands.models import DEFAULT_HF_REPO
 from huggingface_hub import HfApi, create_repo
 
 def stage_bundle(models_dir: Path, staging_dir: Path, repo_id: str | None = None, token: str | None = None) -> None:
@@ -80,7 +80,7 @@ def run(
     staging_dir: Path = typer.Option(Path("hf_staging"), help="Directory to prepare for upload."),
     repo_id: Optional[str] = typer.Option(
         None,
-        help=f"Hugging Face repository ID. Defaults to {DEFAULT_HF_REPO} if triggered.",
+        help=f"Hugging Face repository ID. Defaults to {hub.DEFAULT_HF_REPO} if triggered.",
     ),
     upload: bool = typer.Option(False, "--upload", help="Whether to trigger the upload after staging."),
     token: Optional[str] = typer.Option(
@@ -90,7 +90,7 @@ def run(
 ) -> None:
     """Gather artifacts and optionally push to the Hub."""
     hf_token = token or os.getenv("HF_TOKEN")
-    target_repo = repo_id or (DEFAULT_HF_REPO if upload else None)
+    target_repo = hub.resolve_repo_id(repo_id) if upload else None
     stage_bundle(models_dir, staging_dir, target_repo if upload else None, hf_token)
 
 if __name__ == "__main__":

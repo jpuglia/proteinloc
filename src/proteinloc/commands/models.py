@@ -74,7 +74,7 @@ def download(
     ),
 ) -> None:
     """Pre-fetch classifier artifacts from Hugging Face Hub for offline use."""
-    repo_id = hf_repo_id or os.getenv("PROTEINLOC_HF_REPO_ID") or hub.DEFAULT_HF_REPO
+    repo_id = hub.resolve_repo_id(hf_repo_id)
     targets: dict[ModelName, tuple[str, str]]
 
     if model:

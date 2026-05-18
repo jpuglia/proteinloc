@@ -24,7 +24,7 @@ DEFAULT_HF_REPO: str = "jpuglia/proteinloc"
 _ENV_REPO_ID = "PROTEINLOC_HF_REPO_ID"
 
 
-def _effective_repo_id(repo_id: str | None = None) -> str:
+def resolve_repo_id(repo_id: str | None = None) -> str:
     """Return the repo ID to use, honouring the env-var override."""
     return repo_id or os.getenv(_ENV_REPO_ID) or DEFAULT_HF_REPO
 
@@ -72,7 +72,7 @@ def resolve_classifier_file(
             return local_path
 
     # 2. HF Hub download (cached automatically)
-    effective_repo = _effective_repo_id(repo_id)
+    effective_repo = resolve_repo_id(repo_id)
     _console.print(
         f"[dim]Downloading[/dim] [cyan]{filename}[/cyan] "
         f"[dim]from[/dim] [bold]{effective_repo}[/bold][dim]…[/dim]"
