@@ -1,0 +1,51 @@
+# ── Python build artifacts ────────────────────────────────────────────────────
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# ── Virtual environments & Local Config ───────────────────────────────────────
+.venv/
+.test_venv/
+.python-version
+
+# ── Tool caches & Environment ─────────────────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.agents/
+.codex/
+
+# ── Testing & Coverage ────────────────────────────────────────────────────────
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# ── HF Hub model cache & Local Models ─────────────────────────────────────────
+hf_staging/
+models/
+*.joblib
+*.safetensors
+*.bin
+
+# ── Sample / scratch output files ────────────────────────────────────────────
+results.csv
+results.json
+results.tsv
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*~
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+
+# ── Scaffold stub (not part of the package) ───────────────────────────────────
+main.py
