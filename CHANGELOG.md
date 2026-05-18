@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] – 2026-05-17
+## [0.1.1] - 2026-05-17
+
+### Fixed
+- Fixed PyPI and Python version status badges in README.
+- Updated documentation URLs for PyPI alignment.
+
+## [0.1.0] - 2026-05-17
 
 ### Added
 - Initial release of the `proteinloc` CLI.
@@ -21,5 +27,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `--device` flag for explicit Torch device selection (`cpu`, `cuda:0`, …).
 - `PROTEINLOC_HF_REPO_ID` environment variable to override the default HF repository.
 
-[Unreleased]: https://github.com/jpuglia/proteinloc/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/jpuglia/proteinloc/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/jpuglia/proteinloc/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jpuglia/proteinloc/releases/tag/v0.1.0
