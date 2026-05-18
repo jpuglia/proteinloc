@@ -60,10 +60,10 @@ Embed sequences with a protein language model, then classify subcellular localiz
 | Option | Description | Default |
 |---|---|---|
 | `--fasta PATH` | Input FASTA file *(required)* | — |
-| `--model [esm_300|esm_600|prost]` | Embedding model *(required)* | — |
-| `--output-format [table|json|csv]` | Output format | `table` |
+| <code>--model [esm_300&#124;esm_600&#124;prost]</code> | Embedding model *(required)* | — |
+| <code>--output-format [table&#124;json&#124;csv]</code> | Output format | `table` |
 | `--output PATH` | Write output to file instead of stdout | — |
-| `--device TEXT` | Torch device (`cpu`, `cuda:0`, …) | auto |
+| `--device TEXT` | Torch device (`cpu`, `cuda:0`, …) | `auto` |
 | `--weights-dir PATH` | Local directory with `.joblib` files (overrides HF Hub) | — |
 
 ### `proteinloc models download`
